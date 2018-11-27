@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sixbike</title>
+<script src="Home.js"></script>
+<script src="Product.js"></script>
+<link rel="stylesheet" href="Product.css" type="text/css">
+<link rel="stylesheet" href="Home.css" type="text/css">
+</head>
+
+<body onscroll= "fixHeader()" onLoad="displayOne('sanPham2_1',1,3); displayOne('sanPham2_2',1,9);displayOne('sanPham1_1',2,13); displayOne('sanPham1_2',2,16);khoitao()">
+
+
+<!--TOP DIV-->
+<div id="topDiv">
+	<div id="leftTopDiv">
+		<p>Mua hàng & CSKH: <a href="tel:0.123123123">0123123123</a> / 
+			Tư vấn kĩ thuật: <a href="tel:0123123123">0123123123</a>	
+		</p>
+	</div>
+	<div id="rightTopDiv">
+		<a href="#"><img src="Gplus.png" width="4%" alt="" class="Modi"></a>
+		<a href="#"><img src="facebook-256.png" width="3%" alt="" class="Modi"></a>
+		<a href="#"><img src="instagram-icon.png" width="3%" alt="" class="Modi"></a>
+		<a href="#"><img src="twitter-512.gif" width="3.5%" alt="" class="Modi"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="#" class="register"><img src="padlock-xxl.png" width="3%" alt="" class="Modi">&nbsp;Đăng ký &nbsp;/</a> 
+		<a href="3" class="register"><img src="login_icon.png" width="3%" alt="" class="Modi">&nbsp;Đăng nhập &nbsp;/</a> 
+		<a href="#" class="register"><img src="7965-green-heart.png" width="3.5%" alt="" >&nbsp;Yêu thích</a> 
+	</div>
+</div>
+
+
+
+<!--HEADER-->
+<div id="header" class="head">
+	<div class="hieuung">
+			<a href="Home.html"><img src="logo.png" alt="" style="float: left;" class="sau" ></a>
+	        <a href="Home.html"><img src="logo.png" alt="" style="float: left;position: relative;right: 185px;" class="truoc"></a>
+	</div>
+
+	
+
+	<ul class="menuLon">
+		<li><a href="Home.html">Trang chủ</a></li>
+		<li><a href="product.html">Sản phẩm</a>
+			<ul class="menuNho">
+				<li><a href="product5tr.html">Giá < 5 triệu</a></li>
+				<li><a href="product10tr.html">Giá 5 ~ 10 triệu</a></li>
+				<li><a href="product15tr.html">Giá > 10 triệu</a></li>
+			</ul>
+		
+		</li>
+		<li><a href="blog.html">Blog</a></li>
+		<li><a href="lienhe.html">Liên hệ</a></li>
+		<li><a href="gioithieu.html">Giới thiệu</a></li>
+	</ul>
+	 <label class="search" for="inpt_search">
+	<input s  id="inpt_search" type="search" size="10" placeholder=" Tìm kiếm ...">
+	</label>
+	<a href="chitietgiohang.html"><img src="2772.png" id="hinhGioHang" alt=""></a>
+</div>
+
+
+<!--BIG IMAGE-->
+<div id="bigImage">
+	<div id="content1RightArrow" class="arrow" onClick="changeRight()" onMouseOver="changeBgr(1)" onMouseOut="changeBgr(0)"><img  id="RightArrow" src="arrow-23277_640.png" width="76%"></div>
+	<div id="content1LeftArrow"  class="arrow" onClick="changeLeft()" onMouseOver="changeBgr(1)" onMouseOut="changeBgr(0)"><img src="arrow-23255_960_720.png" width="76%" alt="" id="LeftArrow" ></div>
+</div>
+
+
+<!--SAN PHAM NOI BAT-->
+<div class="sanPhamNoiBat">
+	<div class="hinhSanPham1" id="sanPham1_1">
+	</div>
+	<div class="hinhSanPham2">
+		<div id="hinhSanPham2_tieude"><p>Sản phẩm nổi bật</p></div>
+		<div class="hinhSanPham2_con" id="sanPham2_1" ></div>
+		<div class="hinhSanPham2_con" id="sanPham2_2"></div>
+	</div>
+	<div class="hinhSanPham1" id="sanPham1_2"></div>
+</div>
+
+
+
+
+<!--Our Photo-->
+
+<div id="ourPhoto">
+	<p>Gallery</p>
+	<p>Take a look at our journey!!!</p>
+	<div onClick="hien(this,0)"><img class="hinhMau" src="1648480.jpg" alt="" >
+	<div class="hieuUngHinhMau"></div>
+	<div class="khungAnhHinhMau"></div>
+	</div>
+	<div onClick="hien(this,1)"><img class="hinhMau" src="xe-dien-a2.jpg" alt="" >
+	<div class="hieuUngHinhMau"></div><div class="khungAnhHinhMau"></div></div>
+	<div onClick="hien(this,2)"><img class="hinhMau" src="maxresdefault.jpg" alt="" onClick="hien(this,2)">
+	<div class="hieuUngHinhMau"></div><div class="khungAnhHinhMau"></div></div>
+	<div onClick="hien(this,3)"><img class="hinhMau" src="paris-jackson.jpeg" alt="" onClick="hien(this,3)">
+	<div class="hieuUngHinhMau"></div><div class="khungAnhHinhMau"></div></div>
+	<div onClick="hien(this,4)"><img class="hinhMau" src="gdj1410167142.jpg" alt="" onClick="hien(this,4)">
+	<div class="hieuUngHinhMau"></div><div class="khungAnhHinhMau"></div></div>
+	<div onClick="hien(this,5)"><img class="hinhMau" src="xe-dap-dien-giant-1-1.jpg" alt="" onClick="hien(this,5)">
+	<div class="hieuUngHinhMau"></div><div class="khungAnhHinhMau"></div></div>
+	<div onClick="hien(this,6)"><img class="hinhMau" src="Xe_dien_Lyva_hut_cac_ban_tre_nho_thiet_ke_thanh_lich_1.png" alt="" onClick="hien(this,6)"><div class="hieuUngHinhMau"></div><div class="khungAnhHinhMau"></div></div>
+	<div onClick="hien(this,7)"><img class="hinhMau" src="sua-chua-xe-dap-dien-uy-tin-yen-anh-3.jpg" alt="" onClick="hien(this,7)">
+	<div class="hieuUngHinhMau"></div><div class="khungAnhHinhMau"></div></div>
+	<div onClick="hien(this,8)"><img class="hinhMau" src="1446167909-xe-may-dien.jpg" alt="" onClick="hien(this,8)">
+	<div class="hieuUngHinhMau"></div><div class="khungAnhHinhMau"></div></div>
+</div>
+<div id="viewOurPhoto">
+	<img alt="" id="hinhLonMau">
+	<img src="arrow-23277_640.png" alt="" id="rightArrowHinhMau" onClick="changeRightHinhMau()">
+	<img src="arrow-23255_960_720.png" alt="" id="leftArrowHinhMau" onClick="changeLeftHinhMau()">
+	<input type="button" value="Close" id="dongHinhMau" onClick="dongHinhMau()">
+</div>
+
+<!--review-->
+<div id="reviewTitle">Share the love with us <br>
+<img src="heart-29328_960_720.png" width="7%;" alt="">
+<img src="heart-29328_960_720.png" width="7%;" alt="">
+<img src="heart-29328_960_720.png" width="7%;" alt="">
+<img src="heart-29328_960_720.png" width="7%;" alt="">
+<img src="heart-29328_960_720.png" width="7%;" alt="">
+</div>
+<div id="chuyenReview">
+	<div>
+		<div class="content3_review">
+			<img class="reviewImg" src="layer_author1.png" alt="">
+			<p class="reviewContent">
+		Tôi rất hài lòng với dịch vụ của Mannal Sport, mỗi khi mua đồ thể thao tôi lại lên đây.</p>
+			<span class="reviewName">Ngọc Trinh</span><br>
+			<span class="reviewJob">Người mẫu</span>
+
+		</div>
+		<div class="content3_review">
+			<img class="reviewImg" src="layer_author3.png" alt="">
+			<p class="reviewContent">
+		I am very satisfied with the professional service and product quality as well as the service attitude of Mannal Sport. <br>
+		I'm sure I will come back here many times to buy.</p>
+			<span class="reviewName">Maria ozawa</span><br>
+			<span class="reviewJob">Diễn viên</span>
+		</div>
+		<div class="content3_review">
+			<img class="reviewImg" src="t_real_madrid_varios-3220518.jpg" alt="">
+			<p class="reviewContent">
+		I have nothing to say, I have nothing to say, Mannal Sport is number one. !!!</p>
+			<span class="reviewName">Mourinho</span><br>
+			<span class="reviewJob">HLV</span>
+		</div>
+	</div>
+</div>
+
+<div id="footer"><img src="day.png"  alt=""></div>
+<div id="emailvao">
+	<h1>Gửi email để nhận tin khuyến mãi</h1>
+	<p> Cùng sao 5S Online bắt nhịp với trào lưu chọn xe điện Ngả mũ thán phục với “siêu phẩm SH trong giới xe PEGA (HKbike) – Xe điện được giới trẻ yêu thích sắp đổi tên thương hiệu.</p>                           
+
+<input type="text" id="inputcuoi" placeholder="Email của bạn">
+<input type="button" value="GỬI EMAIL" id="submitno">
+</div>
+</body>
+</html>

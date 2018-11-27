@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Product</title>
+<link rel="stylesheet" href="Home.css">
+<script src="Home.js"></script>
+<script src="Product.js"></script>
+<link rel="stylesheet" href="Product.css">
+
+
+<!--script map-->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+var gmap = new google.maps.LatLng(10.765974,106.689422);
+var marker;
+function initialize()
+{
+    var mapProp = {
+         center:new google.maps.LatLng(10.765974,106.689422),
+         zoom:16,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+ 
+    var map=new google.maps.Map(document.getElementById("googleMap")
+    ,mapProp);
+ 
+  var styles = [
+    {
+      featureType: 'road.arterial',
+      elementType: 'all',
+      stylers: [
+        { hue: '#fff' },
+        { saturation: 100 },
+        { lightness: -48 },
+        { visibility: 'on' }
+      ]
+    },{
+      featureType: 'road',
+      elementType: 'all',
+      stylers: [
+ 
+      ]
+    },
+    {
+        featureType: 'water',
+        elementType: 'geometry.fill',
+        stylers: [
+            { color: '#adc9b8' }
+        ]
+    },{
+        featureType: 'landscape.natural',
+        elementType: 'all',
+        stylers: [
+            { hue: '#809f80' },
+            { lightness: -35 }
+        ]
+    }
+  ];
+ 
+  var styledMapType = new google.maps.StyledMapType(styles);
+  map.mapTypes.set('Styled', styledMapType);
+ 
+  marker = new google.maps.Marker({
+    map:map,
+    draggable:true,
+    animation: google.maps.Animation.DROP,
+    position: gmap
+  });
+  google.maps.event.addListener(marker, 'click', toggleBounce);
+}
+ 
+function toggleBounce() {
+ 
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+ 
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+</head>
+
+<body onscroll= "fixHeader()">
+<!--TOP DIV-->
+<div id="topDiv">
+	<div id="leftTopDiv">
+		<p>Mua hàng & CSKH: <a href="tel:0.123123123">0123123123</a> / 
+			Tư vấn kĩ thuật: <a href="tel:0123123123">0123123123</a>	
+		</p>
+	</div>
+	<div id="rightTopDiv">
+		<a href="#"><img src="Gplus.png" width="4%" alt="" class="Modi"></a>
+		<a href="#"><img src="facebook-256.png" width="3%" alt="" class="Modi"></a>
+		<a href="#"><img src="instagram-icon.png" width="3%" alt="" class="Modi"></a>
+		<a href="#"><img src="twitter-512.gif" width="3.5%" alt="" class="Modi"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="#" class="register"><img src="padlock-xxl.png" width="3%" alt="" class="Modi">&nbsp;Đăng ký &nbsp;/</a> 
+		<a href="3" class="register"><img src="login_icon.png" width="3%" alt="" class="Modi">&nbsp;Đăng nhập &nbsp;/</a> 
+		<a href="#" class="register"><img src="7965-green-heart.png" width="3.5%" alt="" >&nbsp;Yêu thích</a> 
+	</div>
+</div>
+
+
+
+<!--HEADER-->
+<div id="header" class="head">
+	<div class="hieuung">
+			<a href="Home.html"><img src="logo.png" alt="" style="float: left;" class="sau" ></a>
+	        <a href="Home.html"><img src="logo.png" alt="" style="float: left;position: relative;right: 185px;" class="truoc"></a>
+	</div>
+
+	
+
+	<ul class="menuLon">
+		<li><a href="Home.html">Trang chủ</a></li>
+		<li><a href="product.html">Sản phẩm</a>
+			<ul class="menuNho">
+				<li><a href="product5tr.html">Giá < 5 triệu</a></li>
+				<li><a href="product10tr.html">Giá 5 ~ 10 triệu</a></li>
+				<li><a href="product15tr.html">Giá > 10 triệu</a></li>
+			</ul>
+		
+		</li>
+		<li><a href="blog.html">Blog</a></li>
+		<li><a href="lienhe.html">Liên hệ</a></li>
+		<li><a href="gioithieu.html">Giới thiệu</a></li>
+	</ul>
+	 <label class="search" for="inpt_search">
+	<input s  id="inpt_search" type="search" size="10" placeholder=" Tìm kiếm ...">
+	</label>
+	<a href="chitietgiohang.html"><img src="2772.png" id="hinhGioHang" alt=""></a>
+</div>
+
+<!--Intro-->
+<p style="color: rgba(106,106,106,1.00)"><a href="Home.html" style="color: rgba(106,106,106,1.00)"><strong>Trang chủ</strong></a> * Liên hệ</p>
+
+<!--map-->
+<div id="googleMap" style="width: 100%; height: 350px;position: relative;top: 50px;">Google Map</div>
+<div id="lienlacs">
+	<a href="#"><img src="logo.png" style="position: relative;top: 150px;right: 600px;" alt="" ></a>
+	<div id="loginss">
+	
+	<p style="color: #FFFFFF
+	;font-size: 22px;position: relative;font-family: Gill Sans, Gill Sans MT, Myriad Pro, DejaVu Sans Condensed, Helvetica, Arial,' sans-serif'">Liên hệ với chúng tôi</p><br>
+	<p style="color: #898989;position: relative;bottom: 50px;font-size: 16px;">Bạn hãy điền nội dung tin nhắn vào form dưới đây và gửi cho chúng tôi. Chúng tôi sẽ trả lời bạn sau khi nhận được.</p>
+	<input type="text" style="width: 330px;color: white;height: 35px;background-color: #111 ;position: relative;border-color: black;bottom: 40px;" placeholder="Tên*">
+	<input type="text" style="width: 330px;color: white;height: 35px;background-color: #111 ;position: relative;border-color: black;bottom: 40px;left: 10px;" placeholder="Email*">
+		<input type="text" style="width: 680px;color: white;height: 70px;background-color: #111 ;position: relative;border-color:black;bottom: 35px;outline: none;" placeholder="Nội dung*">
+		<input type="button" style="width: 100px;height: 40px;background-color: #10c252 ;color: white;outline: none;cursor: pointer;position: relative;left: 580px;bottom: 80px;" value="Gửi ngay" >
+	
+</div>
+<div id="themvao">
+<img src="64113.png" alt="" id="anhnhone" style="position: relative;bottom: 150px;right: 10px;"><p style="position: relative;color:#898989;bottom: 200px;left: 30px;">Gò vấp,Thành Phố Hồ Chí Minh ,Việt Nam</p>
+<img src="34067.png" alt="" id="anhnhone" style="position: relative;bottom: 200px; right: 10px;"><a href="#" style="color: #0eaa48;position: relative;bottom: 220px;">0987654321</a><p style="position: relative;bottom: 230px;left: 30px; color:#898989 ">Thứ 2 - Chủ nhật: 9:00 - 18:00</p>
+<img src="email-icon-png-download-icons-logos-emojis-email-icons-2400.png" alt="" id="anhnhone" style="position: relative;bottom: 220px;right: 10px;"><a href="https://www.mail.google.com/mail" style="color:#0eaa48;position: relative;cursor: pointer;bottom: 230px;">Sixbiketienthanh@gmail.com</a>
+	
+</div>
+</div>
+
+
+<!-- footer-->
+<div id="footer"><img src="day.png"  alt=""></div>
+<div id="emailvao">
+	<h1>Gửi email để nhận tin khuyến mãi</h1>
+	<p> Cùng sao 5S Online bắt nhịp với trào lưu chọn xe điện Ngả mũ thán phục với “siêu phẩm SH trong giới xe PEGA (HKbike) – Xe điện được giới trẻ yêu thích sắp đổi tên thương hiệu.</p>                           
+
+<input type="text" id="inputcuoi" placeholder="Email của bạn">
+<input type="button" value="GỬI EMAIL" id="submitno">
+</div>
+</body>
+</html>

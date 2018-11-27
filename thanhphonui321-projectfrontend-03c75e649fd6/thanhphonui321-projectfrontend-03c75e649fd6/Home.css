@@ -1,0 +1,825 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0px;
+	background-color: #222;
+	padding-left: 7%;
+	padding-right: 7%;
+}
+html
+{
+	margin: 0px;
+	
+}
+a {
+	text-decoration: none;
+}
+#topDiv {
+	width: 100%;
+	height: 50px;
+	background-color: #222;
+}
+#leftTopDiv {
+	width: 43%;
+	height: 50px;
+	float: left;
+	background-color: #222;
+
+}
+#rightTopDiv {
+	width: 43%;
+	height: 50px;
+	float: right;
+	background-color: #222;
+}
+#leftTopDiv > p{
+	color: #BBBBBB;
+	margin-top: 10px;
+}
+#leftTopDiv p > a:first-child {
+	color: #2EB928;
+	text-decoration: none;
+	font-weight: bold;
+}
+#leftTopDiv p > a:last-child {
+	color: #E0551F;
+	text-decoration: none;
+	font-weight: bold;
+}
+#rightTopDiv > a {
+	margin-left: 10px;
+		
+}
+#rightTopDiv > a:hover{
+	color: #67C533;
+}
+
+.Modi {
+	opacity: 0.7;
+}
+#rightTopDiv {
+	padding-top: 10px;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+.register {
+	text-decoration: none;
+	color: #BBBBBB;
+}
+#header {
+	background-image: url(menu.jpg);
+	width: 100%;
+	height: 100px;
+	padding-left: 30px;
+	padding-top: 20px;
+	box-sizing: border-box;
+/*	position: static;*/
+	z-index: 3;
+/*
+	position: relative;
+right: 50px;
+*/
+}
+/*Menu*/
+.menuLon {
+	list-style-type: none;
+	position: relative;
+	right: 75px;
+}
+.menuLon > li {
+		float: left;
+		width: 105px;
+	height: 35px;
+	padding-top: 5px;
+	box-sizing: border-box;
+	border: 1px solid rgba(92,92,92,1.00);
+	text-align: center;
+	border-radius: 15%;
+	}
+.menuLon > li:nth-child(3){
+	width: 65px;
+}
+.menuLon >li:nth-child(4){
+	width: 80px;
+}
+.menuLon >li:hover {
+	background-color: rgba(90,165,255,1.00);
+}
+.menuLon > li > a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.05em;
+}
+.menuNho {
+	list-style-type: none;
+	padding: 0;
+	display: none;
+	position: relative;
+	z-index: 2;
+	padding-top: 10px;
+	text-align: left;
+}
+.menuNho > li {
+	padding-top: 10px;
+	box-sizing: border-box;
+	width: 200px;
+	height: 40px;
+	padding-left: 20px;
+	background-color: rgba(90,165,255,1.00) ;
+}
+.menuNho >li:hover {
+	background-color: rgba(160,177,255,1.00);
+}
+.menuNho > li > a{
+	text-decoration: none;
+	color: white;
+}
+li:hover > ul{
+		display: block;
+	}
+
+/*het menu*/
+/*
+#menuLon > li {
+	float: left;
+	margin-left: 30px;
+}
+#menuLon > li > a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.1em;
+}
+#header ul li > a:hover{
+	color: #67C533;
+}
+#menuNho {
+	list-style-type: none;
+	padding:0;
+	display: ;
+}
+#menuNho > li > a{
+	color: white;
+}
+li:hover  ul{
+	display: block;
+}
+*/
+#header >input {
+	background-color: #222;
+	margin-left: 90px;
+	margin-top: 12px;
+	border: none;
+	height: 35px;
+	color: white;
+/*
+	position: relative;
+	bottom: 55px;
+	left: 780px;
+*/
+}
+#bigImage {
+	position: relative;
+	right: 7%;
+	width: 114%;
+	height: 550px;
+	background-image: url(slider_1.jpg);
+	background-size: contain;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	animation: sex;
+	animation-duration: 2s;
+}
+@keyframes sex {
+	0% {opacity: 0.4;}
+	100% {opacity: 1;}
+}
+
+.arrow {
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	top: 280px;
+	padding-top: 13px;
+	padding-left: 9px;
+	border-radius: 100%;
+	box-sizing: border-box;
+	background-color: #6A6A6A;
+	cursor: pointer;
+	transition: all 0.5s;
+/*	background-color: rbga*/
+}
+#content1RightArrow {
+	right: 50px;
+	color: #F2F74A;
+}
+
+#content1LeftArrow {
+	left: 50px;
+}
+
+#header label
+{
+	
+	color: white;
+	position: fixed;
+	
+	left: 1000px;
+/*	top: 80px;*/
+	
+}
+
+	.hieuung a > .truoc{
+   
+    transform: perspective( 600px ) rotateY( 0deg );
+    border-radius: 7px;
+  
+    backface-visibility: hidden;
+     transition: transform .5s linear 0s;
+	
+}
+	.hieuung a > .sau{
+  
+    transform: perspective( 600px ) rotateY( 180deg );
+   position: relative;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+		
+}
+
+		
+
+	.hieuung:hover a > .truoc{
+    transform: perspective( 600px ) rotateY( -180deg );
+}
+ 
+.hieuung:hover a > .sau{
+    transform: perspective( 600px ) rotateY( 0deg );
+}
+.hieuung{
+/*
+	position: relative;
+	right: 10px;
+*/
+	
+}
+/*tìm kiếm*/
+.search {
+  display: inline-block;
+  position: relative;
+
+	
+  height: 30px;
+  width: 30px;
+  box-sizing: border-box;
+  margin: 0px 8px 7px 0px;
+  padding: 7px 9px 0px 9px;
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+  transition: all 200ms ease;
+  cursor: text;
+}
+.search:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 22px;
+right: -5px;
+ top: 21px;
+  background: #ffffff;
+  border-radius: 3px;
+  transform: rotate(-45deg);
+  transition: all 200ms ease;
+}
+
+.search:hover {
+  width: 200px;
+  margin-right: 0px;
+}
+
+
+.search input {
+  width: 80%;
+  border: none;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 15px;
+  color: inherit;
+  background: transparent;
+  outline-width: 0px;
+}
+#trangchu a
+{
+	list-style-type: none;
+	text-decoration: none;
+	font-family: Constantia, Lucida Bright, DejaVu Serif, Georgia, serif;
+	color: gray;
+	position: relative;
+	top: 10px;
+}
+
+
+/* San pham noi bat*/
+.sanPhamNoiBat {
+	width: 100%;
+	height: 495px;
+	border: 1px solid red;
+}
+.hinhSanPham1 {
+	width: 32%;
+	height: 100%;
+	border: 1px solid green;
+	float: left;
+	margin-right: 1%;
+}
+.hinhSanPham2 {
+	width: 32%;
+	height: 100%;
+	border: 1px solid blue;
+	float: left;
+	margin-right: 1%;
+}
+#hinhSanPham2_tieude {
+	width: 100%;
+	height: 75px;
+	border: 1px solid pink;
+}
+.hinhSanPham2_con {
+	width: 100%;
+	height: 200px;
+	border: 1px solid yellow;
+	margin-bottom: 2%;
+	margin-top: 1%;
+	
+	
+}
+.brand {
+	width: 32%;
+	height: 200px;
+	float: left;
+	margin-right: 1%;
+	margin-bottom: 1%;
+	background-color: rgba(0,0,0,0.5);
+	position: relative;
+}
+.brand:hover .divcon {
+	opacity: 0;
+}
+
+
+.brand > img{
+	width: 50%;
+	border-radius: 35%;
+	background: radial-gradient(circle,rgba(255,255,255,0.15),rgba(0,0,0,0.5));
+	position: static;
+	z-index: 3;
+}
+.divcon {
+	float: right;
+	width: 50%;
+	padding-left: 20px;
+	padding-top: 20px;
+	box-sizing: border-box;
+	position: relative;
+	transition: all 0.1s;
+}
+.divcon > h3{
+	color: #898989;
+	font-size: 0.9em;
+    line-height: 24px;
+    font-weight: 300;
+	font-family: GothamVnu-Book,sans-serif;
+	float: left;
+	transition: all 0.5s;
+
+}
+.divcon > img {
+	width: 50%;
+	float: left;
+}
+.divcon > p {
+	float: left;
+	color: #99aa0e;
+    font-size: 1.28571em;
+    font-weight: 700;
+    font-family: UTMSeagullBold,sans-serif;
+	margin-left: -83px;
+	margin-top: 40px;
+}
+.divcon > div {
+	width: 60px;
+	height: 20px;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 600;
+	text-align: center;
+	padding-top: 2.8px;
+	box-sizing: border-box;
+	transform: rotate(90deg);
+	position: absolute;
+	top: 22px;
+	right: 2px;
+	z-index: 5;
+}
+.hoverDiv {
+	width: 50%;
+	height: 0;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: none;
+	opacity: 0;
+	transition: all 1s;
+	
+}
+.brand:hover  .hoverDiv{
+	height: 100%;
+	opacity: 1;
+}
+.hoverDiv > p:first-child {
+	color: #898989;
+	text-align: center;
+	line-height: 25px;
+	margin-top: 30px;
+}
+.hoverDiv > p:first-child:hover {
+	color: #67C533;
+}
+.hoverDiv > ul {
+	list-style-type: none;
+	padding-left: 0px;
+	padding-top: 5px;
+	box-sizing: border-box;
+}
+.hoverDiv > ul > li {
+	background-color: white;
+	width: 23%;
+	height: 40px;
+	text-align: center;
+	padding-top: 13px;
+	box-sizing: border-box;
+	float: left;
+	margin-left: 15px;
+}
+.hoverDiv > ul > li:hover{
+	background-color: #67C533;
+}
+.hoverDiv >p:last-child {
+	color: #898989;
+	text-align: center;
+/*	line-height: 30px;*/
+	margin-top: 60px;
+}
+/*
+.hinhSanPham1 {
+	width: 30%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	border: 1px solid red;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.hinhTrongSanPham {
+	border-radius: 50%;
+	background: radial-gradient(rgba(255,255,255,0.15),rgba(0,0,0,1) );
+}
+.chuTrongSanPham1 {
+	width: 100%;
+	height: 130px;
+	border: 1px solid red;
+	margin-top: 10px;
+	padding-left: 30px;
+	box-sizing: border-box;
+	
+}
+.chuTrongSanPham1 > h3 {
+	color: #898989;
+	font-size: 0.9em;
+    line-height: 24px;
+    font-weight: 300;
+	font-family: GothamVnu-Book,sans-serif;
+	float: left;
+	transition: all 0.5s;
+}
+.chuTrongSanPham1 > img {
+	width: 35%;
+	float: left;
+}
+.chuTrongSanPham1 > p {
+	float: left;
+	color: #99aa0e;
+    font-size: 1.28571em;
+    font-weight: 700;
+    font-family: UTMSeagullBold,sans-serif;
+	margin-left: -110px;
+	margin-top: 40px;
+}
+.chuTrongSanPham1 > div {
+	float: left;
+	color: white;
+	width: 60px;
+	height: 30px;
+	background: #0eaa48;
+	font-size: 15px;
+	font-weight: 600;
+	padding-top: 5px;
+	box-sizing: border-box;
+	transform: rotate(90deg);
+	position: relative;
+	bottom: 370px;
+	left: 150px;
+	
+}
+*/
+#lienlacs{
+	background-color: #111;
+	width: 100%;
+	height: 500px;
+	
+}
+#loginss
+{
+	width: 60%;
+	height: 200px;
+	background-color:#111;
+	float: left;
+	position: relative;
+	left: 370px;
+	top: 150px;
+	
+
+}
+#themvao{
+	
+	width: 230px;
+	height: 300px;
+	position: relative;
+	top: 170px;
+	left: 100px;
+}
+#anhnhone{
+	width: 30px;
+	height: 30px;
+	
+}
+#congcu
+{
+	position: relative;
+	right: 80px;
+
+}
+#trangchu a{
+	position: relative;
+	left: 30px;
+	top: 20px;
+}
+#heroin
+{
+	position: relative;
+	left: 370px;
+	width: 450px;
+	height: 500px;bottom: 100px;
+	
+}
+#member
+{
+	width: 230px;
+	height: 300px;
+	position: relative;
+	
+	
+}
+#hinhthanhvien1
+{
+	width: 230px;
+	height: 300px;
+	position: relative;
+
+	left: 565px;
+}
+#hinhthanhvien2
+{
+	width: 230px;
+	height: 300px;
+	position: relative;
+	
+	left: 795px;
+	bottom: 300px;
+}
+#thanhviendiv
+{
+	width: 1500px;
+	box-sizing: border-box;
+	height: 400px;
+	background-color: aliceblue;
+	position: relative;
+	bottom: 250px;
+	right: 200px;
+	background-image: url(8a2fa6c1048bd699dfbac611b146f16a.jpg);
+	background-attachment: fixed;
+	
+	
+}
+#testthu
+{
+		width: 1500px;
+	height: 300px;
+	background-color: aliceblue;
+	position: relative;
+	right: 200px;
+	bottom: 150px;
+	background-image: url(5LpqIv0.jpg);
+	background-attachment: fixed;
+}
+#emailvao
+{
+	background-color: #111;
+		width: 100%;
+	height: 400px;
+	float: left;
+}
+#emailvao h1
+{
+	font-size: 30px;
+	color: white;
+	font-weight: lighter;
+	font-family: GothamVnu-Book,sans-serif;
+    line-height: 1.4;
+	    letter-spacing: .01em;
+	position: relative;
+	left: 360px;
+	top: 80px;
+}
+#emailvao pre
+{
+	color: #898989;position: relative;top: 80px;font-size: 15px;line-height: 25px;
+}
+#inputcuoi
+{
+	width: 430px;
+	height: 50px;
+	position: relative;
+	top: 80px;
+	float: left;
+	left: 240px;
+	    border: 1px solid #e1e1e1;
+	padding: 0 20px;
+	
+}
+input-placeholder { color:#f00; }
+#submitno
+{
+	background-color: #0eaa48;
+	color: wheat;
+	border: hidden;
+	width: 200px;
+	height: 53px;
+	position: relative;
+	top: 80px;
+	left: 235px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+#submitno:hover{
+	background-color: #1DA224;
+}
+#chungtoine
+{
+		background-color: #111;
+		width: 100%;
+	height: 280px;
+	
+	overflow: visible;
+	margin-top: 4px;
+	box-sizing: border-box;
+	float: left;
+}
+#chungtoine img
+{
+	position: relative;
+	top: 120px;
+	left: 30px;
+	width: 170px;
+	box-sizing: border-box;
+}
+#chungtoine p
+{
+	color: white;
+	font-size: 20px;
+	position: relative;
+
+	padding: 25px;
+	
+	left: 260px;
+	bottom: 30px;
+}
+#chungtoine ul
+{
+	font-size: 18px;
+	bottom: 55px;
+	position: relative;
+	left: 255px;
+}
+#chungtoine li
+{
+	list-style-type: none;
+	padding: 3px;
+	padding-right: 10px;
+	
+	
+}
+#chungtoine a
+{
+	color: #898989 ;
+}
+#chungtoine a:hover{
+	color: green;
+}
+#thgian
+{
+	list-style-type: none;
+	padding: 3px;
+	padding-right: 10px;
+	word-spacing: 2px;
+	line-height: 25px;
+	color: #898989 ;
+	font-size: 15px;
+	position: relative;
+	bottom: 305px;
+	left: 385px;
+	box-sizing: border-box;
+	
+}
+#chungtoine span
+{
+	color: #AAA3A3;
+}
+#chungtoine span:hover
+{
+	color: green;
+}
+#kok
+{
+	font-size: 13px;
+	color: #898989;
+	position: relative;
+	bottom: 450px;
+	left: 680px;
+}
+
+#appand
+{
+	position: relative;
+	bottom: 750px;
+	left: 700px;
+
+}
+#appand img
+{
+	width: 110px;
+	height: 50px;
+}
+#headeroblog
+{
+	box-sizing: border-box;
+	
+}
+#headerofblog img
+{
+	position: relative;
+	top: 50px;
+	left: 20px;
+	width: 360px;
+}
+#anh2d:hover{
+	
+}
+#bao
+{
+	width: 800px;
+	height: 500px;
+	background-color: black;
+	margin-top: 150px;
+	float: left;
+	box-sizing: border-box;
+
+}
+#danhmuc
+{
+	width: 300px;
+	height: 170px;
+	float: left;
+	margin-top: 150px;
+	background-color: black;
+	margin-left: 10px;
+}
+#danhmuc a
+{
+	color: #898989;
+	
+}
+#danhmuc a:hover{
+	color: green;
+}
